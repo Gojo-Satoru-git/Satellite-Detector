@@ -5,9 +5,10 @@ export default defineConfig({
   plugins: [react()],
    server: {
     host: '0.0.0.0',  // Exposes to external network
-    port: 3000         // Specify the port you want
-   },
-  allowedHosts: [
+    port: 3000 ,
+    allowedHosts: [
       'satellite-detector-1.onrender.com', // Add the external host here
     ],
+   },
+ 
 })
