@@ -1,0 +1,131 @@
+/* Fullscreen background image with glass overlay */
+.upload-container {
+  min-height: 100vh; /* Ensure it covers the full height of the viewport */
+  width: 100vw; /* Ensure full width */
+  background: url('assets/676673.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: xx-large;
+  color: #fff;
+  padding: 2rem;
+  box-shadow: 0 0 30px 10px #f5f2f3; /* White glowing effect for the container */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect for the container */
+.upload-container:hover {
+  box-shadow: 0 0 60px 15px #f5f2f3; /* Brighter white glow on hover */
+}
+
+/* Glassy card for the content */
+.upload-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 3rem; /* Increased padding for more space */
+  width: 100%;
+  max-width: 2000px; /* Increased max-width for more width */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 20px 5px #f5f2f3; /* Glowing effect for the card */
+}
+
+/* Hover effect for the upload box */
+.upload-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 20px 5px #f5f2f3; /* Glowing effect on hover */
+}
+
+/* Title styling */
+.upload-title {
+  font-size: 2.5rem; /* Increased font size */
+  margin-bottom: 2rem; /* Increased margin for spacing */
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 0 0 10px #f5f2f3, 0 0 20px #f5f2f3; /* White glowing text effect */
+}
+
+/* Styling for file input */
+input[type='file'] {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem; /* Increased padding */
+  border-radius: 8px;
+  border: none;
+  background-color: #ffffff;
+  color: #000;
+  width: 100%;
+  max-width: 2000px; /* Increased max-width */
+  box-shadow: 0 0 8px 3px #f5f2f3; /* Glowing effect around file input */
+}
+
+/* Button styling */
+button {
+  padding: 12px 24px;
+  font-size: 1.1rem; /* Slightly larger font size */
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px; /* Increased margin for spacing */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  box-shadow: 0 0 10px 5px #f5f2f3; /* Glowing effect on button */
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px 10px #f5f2f3; /* Glowing effect on hover */
+}
+
+/* Error text styling */
+.error-text {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Image preview section */
+.image-preview {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.image-preview img {
+  max-width: 300%;
+  max-height: 900px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  box-shadow: 0 0 15px 5px #f5f2f3; /* Glowing effect for image preview */
+}
+
+/* Hover effect for the image */
+.image-preview img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .upload-title {
+    font-size: 2rem; /* Adjust font size for small screens */
+  }
+
+  .upload-box {
+    padding: 1.5rem; /* Decrease padding for smaller screens */
+  }
+
+  input[type='file'], button {
+    width: 100%; /* Ensure full width on small screens */
+  }
+}

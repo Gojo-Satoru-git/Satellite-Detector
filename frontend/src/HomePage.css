@@ -1,0 +1,158 @@
+/* Fullscreen background container for the home page */
+.homepage-container {
+  min-height: 100vh;
+  width: 100vw;
+  background: url('assets/676673.jpg') no-repeat center center/cover; /* Fullscreen background image */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 20px 5px #f5f2f3; /* Glowing effect */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Hover effect on the container for a more pronounced glow */
+.homepage-container:hover {
+  box-shadow: 0 0 40px 10px #f5f2f3; /* Brighter glow on hover */
+}
+
+/* Project header */
+.project-header {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 8px #f5f2f3, 0 0 16px #f5f2f3, 0 0 24px #f5f2f3; /* Glowing text effect */
+  transition: text-shadow 0.3s ease-in-out;
+}
+
+.project-header h1 {
+  margin: 0.5rem 0;
+}
+
+/* Styling for project sections (Introduction, Key Objectives, Methodology) */
+.project-card {
+  background: rgba(0, 0, 0, 0.6); /* Glass-like card */
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2rem;
+  width: 80%;
+  max-width: 800px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.3), 0 0 20px #ebf0eb; /* Green glow on hover */
+}
+
+/* Project card title */
+.project-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-weight: bold; /* Glowing effect for titles */
+}
+
+/* Project card list styling */
+.project-card ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+}
+
+.project-card li {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+/* Action section with the button */
+.action-section {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.action-section button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px #d9dfd9, 0 0 16px #f0f3f0; /* Button glowing effect */
+  width: 100%;
+}
+
+.action-section button:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #4caf50, 0 0 40px #4caf50; /* Glowing effect on hover */
+}
+
+.action-section button:focus {
+  outline: none;
+}
+
+/* Error text styling */
+.error-text {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Image preview section */
+.image-preview {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.image-preview img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the image */
+.image-preview img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .project-header {
+    font-size: 2rem;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  .action-section button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-header {
+    font-size: 1.5rem;
+  }
+
+  .project-card {
+    padding: 1.5rem;
+  }
+
+  .action-section button {
+    padding: 10px 20px;
+  }
+}

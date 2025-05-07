@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: spacecraft-backend
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn main:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9.16
+    disk:
+      name: uploads
+      mountPath: /var/www/uploads
+      sizeGB: 1
+
+  - type: web
+    name: spacecraft-frontend
+    runtime: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview
+    envVars:
+      - key: VITE_API_URL
+        value: https://spacecraft-backend.onrender.com
