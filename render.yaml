@@ -15,8 +15,9 @@ services:
   - type: web
     name: spacecraft-frontend
     runtime: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run preview
+    buildCommand: yarn
+    startCommand: yarn dev
+    buildCommandPath: frontend
     envVars:
       - key: VITE_API_URL
-        value: https://spacecraft-backend.onrender.com
+        value: 22.15.0
